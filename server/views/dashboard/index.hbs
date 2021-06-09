@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div>
+                <h5>Employ list</h5>
+                <a href="/dashboard/add/employ">add new employ</a>
+            </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#if emps}}
+                    {{#each emps}}
+                    <tr>
+                        <th scope="row">
+                            <a href='/dashboard/view/{{_id}}'> {{firstName}}</a>
+                        </th>
+                        <td>{{lastName}} </td>
+                        <td>{{emailId}} </td>
+                        <td>{{department}}</td>
+                        <td>
+                            <button type="button" id="" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+
+                    {{/each}}
+                    {{/if}}
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
